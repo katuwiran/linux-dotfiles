@@ -3,11 +3,11 @@
 // ┏┓┏╋┓┏┃┏┓┏    nsticky.
 // ┛┗┛┗┗┗┛┗┗┫    https://github.com/lonerOrz/nsticky
 //          ┛
-spawn-at-startup "~/bin/nsticky"
+spawn-at-startup "~/.local/bin/nsticky"
 
 // this will overturn the Mod+Y in niri-scratchpad.
 // I duplicated the values so they can still be modular.
 // but I seriously wish keybinds are a many to many relationship :(
 binds {
-	Mod+Shift+Y { spawn-sh "~/bin/nsticky toggle-active;"; }
+	Mod+Shift+Y { spawn-sh "~/.local/bin/nsticky sticky toggle-active;"; }
 }
