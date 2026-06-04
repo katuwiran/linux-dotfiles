@@ -1,0 +1,23 @@
+[Unit]
+Description=Noctalia Shell
+# If Noctalia requires an active graphical session, uncomment the next line:
+# After=graphical-session.target
+
+[Service]
+# IMPORTANT: Replace this with the absolute path to the noctalia executable
+# You can find the path by running `which noctalia` in your terminal.
+ExecStart=/usr/bin/qs -c noctalia-shell
+
+# This tells systemd to restart it regardless of how it exited (crash or manual close)
+Restart=always
+
+# A 2-second delay prevents your CPU from maxing out if the shell enters a crash loop
+RestartSec=2
+
+# Optional: If Noctalia needs access to a specific display server and fails to find it, 
+# you may need to pass environmental variables here.
+# Environment="DISPLAY=:0"
+# Environment="WAYLAND_DISPLAY=wayland-0"
+
+[Install]
+WantedBy=default.target
