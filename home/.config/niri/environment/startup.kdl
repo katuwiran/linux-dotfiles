@@ -7,9 +7,8 @@
 //=================||
 //   Environment   ||
 //=================||
-spawn-at-startup "qs" "-c" "noctalia-shell"            // automatically start the shell
-spawn-at-startup "fish" "-c" "kbuildsycoca6"           // to generate dolphin's application preferences
-spawn-at-startup "fish" "-c" "fish_add_path" "~/bin/"  // add ~/bin to fish on startup (hack for now)
+spawn-at-startup "fish" "-c" "kbuildsycoca6"                                     // to generate dolphin's application preferences
+spawn-at-startup "fish" "-c" "fish_add_path" "~/bin/"                            // add ~/bin to fish on startup (hack for now)
 spawn-at-startup "fish" "-c" "fish_add_path" "~/context/tex/texmf-linux-64/bin"  // add ~/bin to fish on startup (hack for now)
 
 
@@ -31,5 +30,6 @@ spawn-at-startup "fish" "-c" "sleep 5; digitalclock5 &" // launches clock and ma
 spawn-at-startup "fish" "-c" "logseq &"
 spawn-at-startup "fish" "-c" "sleep 5; rssguard &"
 spawn-at-startup "fish" "-c" "sleep 5; artha &"
-// spawn-sh-at-startup "$RIKAI/Config/Linux/Vikunja-patched.AppImage";
+spawn-at-startup "fish" "-c" "sleep 5; copyq &"
+spawn-sh-at-startup "$/mnt/Rikai/Config/Linux/Vikunja-patched.AppImage";
 // spawn-sh-at-startup "vja -u lh -p lh ls" // initializing vja
