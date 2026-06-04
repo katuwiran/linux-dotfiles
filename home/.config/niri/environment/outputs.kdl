@@ -4,16 +4,19 @@
 // ┗┛┗┻┗┣┛┗┻┗┛     https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 //      ┛
 output "eDP-1" {
-    // mode custom=true "1000x660@60"
-    mode custom=true "1920x1080@60"
-    scale 1            // thank you for fractional scaling. I was losing my mind in Hyprland.
-    transform "normal" // for rotations: normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    mode "1920x1080@144.002"
     focus-at-startup
+    variable-refresh-rate
     background-color "#222222"
-    backdrop-color "#222222"
-
+    backdrop-color   "#222222"
     // note to future self: custom hot-corners/layouts per monitor.
     // I only have 1 monitor (laptop) so not for now.
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@60"
+    position x=-1920 y=0
+    transform "270"
 }
 
 output "DP-1" {
