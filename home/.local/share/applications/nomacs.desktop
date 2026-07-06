@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Nomacs (AppImage)
+Comment=Fast and lightweight image viewer
+Exec=/home/rikai/.local/bin/nomacs.AppImage %F
+Icon=image-viewer
+Terminal=false
+Categories=Graphics;Viewer;
+MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/png;image/tiff;image/webp;image/x-icns;image/x-ico;
