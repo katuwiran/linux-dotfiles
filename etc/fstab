@@ -1,0 +1,23 @@
+# nvme0n1, @root
+UUID=4fb1ae32-1826-432b-83e5-2ed991e00202	/         	btrfs     rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@	0 0
+
+# nvme0n1, @home
+UUID=4fb1ae32-1826-432b-83e5-2ed991e00202	/home     	btrfs     rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@home	0 0
+
+# nvme0n1, @.snapshots
+UUID=4fb1ae32-1826-432b-83e5-2ed991e00202	/.snapshots	btrfs     rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@.snapshots	0 0
+
+# nvme0n1, @log
+UUID=4fb1ae32-1826-432b-83e5-2ed991e00202	/var/log  	btrfs     rw,noatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvol=/@var_log0 0
+
+# nvme0n1, boot/efi
+UUID=404E-C888      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# nvme0n1, swap
+UUID=4fb1ae32-1826-432b-83e5-2ed991e00202	/swap	btrfs	subvol=swap,noatime,compress=no,space_cache=v2	0	0
+
+# system swapfile
+/swap/swapfile none swap defaults 0 0
+
+# LS
+UUID=6E32E9FF121D4DD4 /mnt/LS	ntfs-3g	defaults,uid=1001,gid=1001,dmask=022,fmask=022,nofail,x-systemd.automount	0	0

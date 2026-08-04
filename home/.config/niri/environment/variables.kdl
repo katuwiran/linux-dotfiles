@@ -33,12 +33,12 @@ environment {
     BIN    "/home/rikai/BIN"
 
     // NTFS Folders
-    RIKAI       "/mnt/Rikai"
+    RIKAI       "/mnt/LS"
     WINDOWS     "/mnt/Windows"
-    PROJECTS    "/mnt/Rikai/Projects/"
-    ART         "/mnt/Rikai/Projects/Art"
-    PROGRAMMING "/mnt/Rikai/Projects/Programming"
-    FILES       "/mnt/Rikai/Files"
+    PROJECTS    "/mnt/LS/Projects/"
+    ART         "/mnt/LS/Projects/Art"
+    PROGRAMMING "/mnt/LS/Projects/Programming"
+    FILES       "/mnt/LS/Files"
 
     //dotnet
     DOTNET_CLI_TELEMETRY_OPTOUT "1"
