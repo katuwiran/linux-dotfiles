@@ -7,7 +7,7 @@ binds {
 
 	// Q - Zed              W - Firefox       E - Dolphin      R - Rider         T - Alacritty
 	// A - Logseq           S - Sublime Text  D - Fuzzel       F - *Maximize     G - Sourcegit
-	// Z - Zoom             X - Vikunja       C - Caprine      V - Vestktop      B - OBS
+	// Z - Godot            X - Vikunja       C - Copyq        V - Vestktop      B - OBS
 
 	// Y - WnR              U -               I - Calibre      O - Okular        P - RSS Guard     [ - Artha
 	// H - SQLite Browser   J -               K - Krita        L -
@@ -25,41 +25,41 @@ binds {
     Mod+Shift+BracketLeft { spawn "artha"; }
 
     Mod+Shift+A { spawn "logseq"; }
-    Mod+Shift+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Shift+D { spawn-sh "bemoji -t"; }
     Mod+Shift+S { spawn "subl"; }
     Mod+Shift+G { spawn "sourcegit"; }
     Mod+Shift+H { spawn "sqlitebrowser"; }
     Mod+Shift+K { spawn-sh "GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb krita"; }
 
-    Mod+Shift+Z { spawn "zoom"; }
-    Mod+Shift+X { spawn-sh r#"$RIKAI/Config/Linux/Vikunja-patched.AppImage"#; }
-    Mod+Shift+C { spawn "caprine"; }
+    //Mod+Shift+Z { spawn "zoom"; }
+    Mod+Shift+Z { spawn "godot-mono"; }
+    Mod+Shift+X { spawn "Vikunja-patched.AppImage"; }
+    Mod+Shift+C { spawn "smile"; }
     Mod+Shift+V { spawn "vesktop"; }
-    Mod+Shift+B{ spawn "obs"; }
+    Mod+Shift+B { spawn "obs"; }
     Mod+Shift+N { spawn "easyeffects"; }
-    Mod+Shift+M { spawn-sh "env PULSE_LATENCY_MSEC=250 beefweb_mpris"; }
+    Mod+Shift+M { spawn-sh "env PULSE_LATENCY_MSEC=1000 beefweb_mpris"; }
+    Mod+Q { spawn-sh "~/.local/bin/niriutils focus -w dev.zed.Zed-Preview"; }
+    Mod+W { spawn-sh "~/.local/bin/niriutils focus -w firefox"; }
+    Mod+E { spawn-sh "~/.local/bin/niriutils focus -w dolphin"; }
+    Mod+R { spawn-sh "~/.local/bin/niriutils focus -w rider"; }
+    Mod+I { spawn-sh "~/.local/bin/niriutils focus -w calibre"; }
+    Mod+O { spawn-sh "~/.local/bin/niriutils focus -w okular"; }
+    Mod+P { spawn-sh "~/.local/bin/niriutils focus -w rssguard"; }
+    Mod+BracketLeft {spawn-sh "~/.local/bin/niriutils focus -w artha";  }
 
-    Mod+Q { spawn-sh "~/bin/niriutils focus -w dev.zed.Zed-Preview"; }
-    Mod+W { spawn-sh "~/bin/niriutils focus -w firefox"; }
-    Mod+E { spawn-sh "~/bin/niriutils focus -w dolphin"; }
-    Mod+R { spawn-sh "~/bin/niriutils focus -w rider"; }
-    Mod+I { spawn-sh "~/bin/niriutils focus -w calibre"; }
-    Mod+O { spawn-sh "~/bin/niriutils focus -w okular"; }
-    Mod+P { spawn-sh "~/bin/niriutils focus -w rssguard"; }
-    Mod+BracketLeft {spawn-sh "~/bin/niriutils focus -w artha";  }
-
-    Mod+A { spawn-sh "~/bin/niriutils focus -w logseq"; }
-    Mod+S { spawn-sh "~/bin/niriutils focus -w subl"; }
+    Mod+A { spawn-sh "~/.local/bin/niriutils focus -w logseq"; }
+    Mod+S { spawn-sh "~/.local/bin/niriutils focus -w subl"; }
 	Mod+D { spawn "fuzzel"; }
-    Mod+G { spawn-sh "~/bin/niriutils focus -w sourcegit"; }
-    Mod+H { spawn-sh "~/bin/niriutils focus -w sqlitebrowser"; }
-    Mod+K { spawn-sh "~/bin/niriutils focus -w krita"; }
+	Mod+G { spawn-sh "~/.local/bin/niriutils focus -w sourcegit"; }
+    Mod+H { spawn-sh "~/.local/bin/niriutils focus -w sqlitebrowser"; }
+    Mod+K { spawn-sh "~/.local/bin/niriutils focus -w krita"; }
 
-    Mod+Z { spawn-sh "~/bin/niriutils focus -w zoom"; }
-    Mod+X { spawn-sh "~/bin/niriutils focus -w vikunja"; }
-    Mod+C { spawn-sh "~/bin/niriutils focus -w caprine"; }
-    Mod+V { spawn-sh "~/bin/niriutils focus -w vesktop"; }
-    Mod+B { spawn-sh "~/bin/niriutils focus -w com.obsproject.Studio"; }
-    Mod+N { spawn-sh "~/bin/niriutils focus -w easyeffects"; }
-    Mod+M { spawn-sh "~/bin/niriutils focus -w foobar2000.exe"; }
+    Mod+Z { spawn-sh "~/.local/bin/niriutils focus -w Godot"; }
+    Mod+X { spawn-sh "~/.local/bin/niriutils focus -w vikunja"; }
+    Mod+C { spawn-sh "copyq toggle"; }
+    Mod+V { spawn-sh "~/.local/bin/niriutils focus -w vesktop"; }
+    Mod+B { spawn-sh "~/.local/bin/niriutils focus -w com.obsproject.Studio"; }
+    Mod+N { spawn-sh "~/.local/bin/niriutils focus -w easyeffects"; }
+    Mod+M { spawn-sh "~/.local/bin/niriutils focus -w foobar2000.exe"; }
 }
