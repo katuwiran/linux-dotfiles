@@ -7,6 +7,8 @@
 # https://docs.noctalia.dev/umbriel/configuration/#include
 [include]
 files = [ 
+files = [
+	"desktop-env.toml",
 ]
 
 [include.optional]

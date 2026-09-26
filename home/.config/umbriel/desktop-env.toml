@@ -1,0 +1,193 @@
+
+# ┳┓   ┓        ┏┓    
+# ┃┃┏┓┏┃┏╋┏┓┏┓  ┣ ┏┓┓┏     Desktop Environment
+# ┻┛┗ ┛┛┗┗┗┛┣┛  ┗┛┛┗┗┛     - Envvars, Startup, Inputs, Outputs
+#           ┛         
+
+
+# ┏┓    •                ┓┏    •  ┓ ┓
+# ┣ ┏┓┓┏┓┏┓┏┓┏┓┏┳┓┏┓┏┓╋  ┃┃┏┓┏┓┓┏┓┣┓┃┏┓┏     Environment variables,
+# ┗┛┛┗┗┛┗┛ ┗┛┛┗┛┗┗┗ ┛┗┗  ┗┛┗┻┛ ┗┗┻┗┛┗┗ ┛     prefixes, etc.
+#
+
+[environment]
+#===================#
+#   Desktop Stuff   #
+#===================#
+XDG_MENU_PREFIX     = "arch-"       # to fix missing default apps in KDE Dolphin
+LANG                = "en_US.UTF-8"
+LC_ALL              = "en_US.UTF-8"
+GDK_DEBUG           = "portals"     # to "suggest" apps to use the KDE file picker
+DG_MENU_PREFIX      = "arch-"
+
+#=============#
+#   Styling   #
+#=============#
+# QT_STYLE_OVERRIDE                "qt6ct-style"
+QT_QPA_PLATFORM                     = "wayland"
+QT_QPA_PLATFORMTHEME_QT5            = "qt5ct"
+QT_QPA_PLATFORMTHEME                = "qt6ct"
+QT_WAYLAND_DISABLE_WINDOWDECORATION = "1"
+QT_AUTO_SCREEN_SCALE_FACTOR         = "1"
+
+#=================#
+#   Preferences   #
+#=================#
+TERM   = "alacritty"
+EDITOR = "nvim"
+
+#=====================#
+#   Wine/foobar2000   #
+#=====================#
+WINEARCH   = "wow64"
+WINEPREFIX = "/home/rikai/.local/share/wineprefixes/foobar2000"
+
+#=====================#
+#   Drive 1 Folders   #
+#=====================#
+HOME   = "/home/rikai"
+CONFIG = "/home/rikai/.config"
+BIN    = "/home/rikai/BIN"
+
+#=====================#
+#   Drive 2 Folders   #
+#=====================#
+RIKAI       = "/mnt/LS"
+WINDOWS     = "/mnt/Windows"
+PROJECTS    = "/mnt/LS/Projects/"
+ENDEAVORS   = "/mnt/LS/Endeavors/"
+TTS         = "/mnt/LS/Endeavors/TTS"
+ART         = "/mnt/LS/Projects/Art"
+PROGRAMMING = "/mnt/LS/Projects/Programming"
+FILES       = "/mnt/LS/Files"
+
+#============#
+#   Dotnet   #
+#============#
+DOTNET_CLI_TELEMETRY_OPTOUT = "1"
+
+#==============#
+#   Electron   #
+#==============#
+ELECTRON_OZONE_PLATFORM_HINT = "auto"
+SDL_VIDEODRIVER = "wayland"
+
+
+
+# ┏┓            ┏┓
+# ┗┓╋┏┓┏┓╋┓┏┏┓  ┣┫┏┓┏┓┏     Startup Applications, Services
+# ┗┛┗┗┻┛ ┗┗┻┣┛  ┛┗┣┛┣┛┛
+#           ┛     ┛ ┛
+
+[general]
+autostart = [
+	#=================#
+	#   Environment   #
+	#=================#
+	"kbuildsyscoca6",           # to generate dolphin's application preferences
+	"fish_add_path ~/bin/",     # add ~/bin to fish on startup (hack for now)
+	"fish_add_path ~/context/tex/texmf-linux-64/bin",
+
+	#==============#
+	#   Services   #
+	#==============#
+	"hyprlax --config ~/.config/hyprlax/config.toml",
+
+	#==================#
+	#   Applications   #
+	#==================#
+	"~/.local/bin/musicpresence.AppImage",
+	"noctalia",
+	"copyq",
+	"super-productivity",
+	"easyeffects",
+]
+
+
+
+# ┳
+# ┃┏┓┏┓┓┏╋┏     Inputs
+# ┻┛┗┣┛┗┻┗┛     https://docs.noctalia.dev/umbriel/input/
+#    ┛
+
+[input]
+middle_click_paste = false
+window_drag_toggle = "pinned"
+
+
+#==============#
+#   Keyboard   #
+#==============#
+[input.keyboard]
+layout         = ""           # empty uses the system default
+variant        = ""
+options        = ""
+repeat_delay   = 200
+repeat_rate    = 50
+numlock_toggle = true
+track_layout   = "global"
+
+#==============#
+#   Touchpad   #
+#==============#
+[input.touchpad]
+tap                       = true
+natural_scroll            = true
+#left_handed               = false
+#tap_button_map            = "left_right_middle"
+accel_profile             = "flat"
+sensitivity               = 0.5
+scroll_factor             = 1.5
+disable_while_typing      = false
+disable_on_external_mouse = false
+click_method              = "clickfinger"
+
+#===========#
+#   Mouse   #
+#===========#
+[input.mouse]
+natural_scroll     = false
+#left_handed        = false
+accel_profile      = "flat"
+sensitivity        = -0.200
+scroll_wheel_step  = 60
+# scroll_button      = "MouseBack"
+scroll_button_lock = false
+
+#============#
+#   Cursor   #
+#============#
+[input.cursor]
+theme = ""
+size = 24
+hardware_cursor = true
+follows_focus = false
+hide_when_typing = false
+hide_timeout_ms = 0
+
+#===========#
+#   Focus   #
+#===========#
+[input.focus]
+follows_mouse = false
+follows_mouse_max_scroll = 0.5
+
+
+
+# ┏┓
+# ┃┃┓┏╋┏┓┓┏╋┏     Outputs
+# ┗┛┗┻┗┣┛┗┻┗┛     https://docs.noctalia.dev/umbriel/outputs/
+#      ┛
+
+#===========#
+#   eDP-1   #
+#===========#
+[output.eDP-1]
+mode = "1920x1080@144.002"
+position = [0, 0]
+scale = 1
+hdr = "off"
+workspaces = "dynamic"
+#cyclic_workspaces = true
+direct_scanout = true # Disable it if fullscreen content causes corruption, black frames, or flicker
+vrr = "always"
