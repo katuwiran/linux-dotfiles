@@ -1,0 +1,64 @@
+
+# ┓┏┓    ┓ •   ┓
+# ┃┫ ┏┓┓┏┣┓┓┏┓┏┫┏     Umbriel Keybinds
+# ┛┗┛┗ ┗┫┗┛┗┛┗┗┻┛
+#       ┛
+
+[keybinds]
+#===================#
+#   Media Buttons   #
+#===================#
+"XF86AudioRaiseVolume"  = { action = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+",  allow_when_locked = true }
+"XF86AudioLowerVolume"  = { action = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-",  allow_when_locked = true }
+"XF86AudioMute"         = { action = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",   allow_when_locked = true }
+"XF86AudioMicMute"      = { action = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle", allow_when_locked = true }
+"XF86AudioNext"         = "spawn:noctalia msg media next"
+"XF86AudioPrev"         = "spawn:noctalia msg media previous"
+"XF86AudioPlay"         = "spawn:noctalia msg media toggle"
+"XF86AudioStop"         = "spawn:noctalia msg media stop"
+"XF86MonBrightnessUp"   =  { action = "spawn:brightnessctl --class=backlight set +5%",  allow_when_locked = true }
+"XF86MonBrightnessDown" =  { action = "spawn:brightnessctl --class=backlight set 5%-",  allow_when_locked = true }
+
+#===========#
+#   Focus   #
+#===========#
+"Mod+Up"          = "window-focus-or-workspace-up"
+"Mod+Left"        = "window-focus-or-output-left"
+"Mod+Right"       = "window-focus-or-output-right"
+"Mod+Down"        = "window-focus-or-workspace-down"
+"Mod+Grave"       = "window-focus-next"
+"Mod+Shift+Grave" = "window-focus-previous"
+"Alt+Tab"         = { action = "window-focus-last", cooldown_ms = 100 }
+
+#==================#
+#   Focus, Mouse   #
+#==================#
+"Mod+WheelUp"         = { action = "window-focus-or-output-left",    cooldown_ms = 50 } # I don't know why. My brain just prefers it this way.
+"Mod+WheelDown"       = { action = "window-focus-or-output-right",   cooldown_ms = 50 } # Horizontal nav is much more conceptually related
+"Mod+Shift+WheelUp"   = { action = "window-focus-or-workspace-up",   cooldown_ms = 50 } # Vertical nav means you're jumping across contexts
+"Mod+Shift+WheelDown" = { action = "window-focus-or-workspace-down", cooldown_ms = 50 } # Win+Shift is more tedious, hence that's why it's mapped to Vert. axis
+"Mod+MouseForward"    = { action = "window-focus-or-workspace-up",   cooldown_ms = 50 }
+"Mod+MouseBack"       = { action = "window-focus-or-workspace-down", cooldown_ms = 50 }
+
+#=======================#
+#   Moving and Sizing   #
+#=======================#
+"Mod+Shift+Left"         = "column-move-left"
+"Mod+Shift+Right"        = "column-move-right"
+"Mod+Shift+Up"           = "window-move-or-workspace-up"
+"Mod+Shift+MouseForward" = "window-move-or-workspace-up"
+"Mod+Shift+Down"         = "window-move-or-workspace-down"
+"Mod+Shift+MouseBack"    = "window-move-or-workspace-down"
+"Mod+BracketLeft"        = "window-consume-or-expel-left"
+"Mod+BracketRight"       = "window-consume-or-expel-right"
+"Mod+Space"              = "window-cycle-primary-extent"
+
+#=============#
+#   Windows   #
+#=============#
+"Alt+F4"          = "window-close"
+"Mod+F"           = "window-toggle-maximize"
+"Mod+Shift+F"     = "window-toggle-fullscreen"
+"Mod+Shift+Y"     = "window-toggle-pinned"
+"Mod+Shift+Space" = "window-toggle-floating"
+
