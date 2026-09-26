@@ -6,13 +6,24 @@
 **/systemd/user/aw-server.service
 **/systemd/user/pulseaudio.service
 
-# vja
-.vjacli/token.json
 
 # csharp scripts
 **/rikai
 
 # binaries
-**/bin/niriutils
-**/bin/nsticky
-**/bin/vjawrapper
+**/bin/
+**/scripts/
+
+# vja
+.vjacli/token.json
+
+# cache
+**/vesktop/sessionData/
+**/Sublime Text/Installed Packages/
+**/Sublime Text/Packages/
+**/wineprefixes/
+**/sublime-text/Lib/
+**/sublime-text/Packages/
+**/sublime-text/Installed Packages/
+**/share/applications/
+**/fish
